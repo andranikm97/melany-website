@@ -11,11 +11,11 @@ var bodyParser = require("body-parser");
 var router = require("./router");
 
 var app = express();
-app.engine('handlebars', exphbs());
-app.set('view engine', 'handlebars');
+app.engine("handlebars", exphbs());
+app.set("view engine", "handlebars");
 app.use(express["static"]("public"));
 app.use(router);
-var PORT = 3000;
-app.listen(PORT, function () {
-  console.log("Server started at localhost:".concat(PORT, "\uD83D\uDE0E"));
+var usePort = process.env.PORT ? process.env.PORT : 3000;
+app.listen(usePort, function () {
+  console.log("Up and running on port " + usePort + " 😎");
 });
