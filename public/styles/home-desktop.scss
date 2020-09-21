@@ -1,22 +1,22 @@
 @use 'base';
 
-
 .middle {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
+  align-items: center;
   overflow: scroll;
   width: auto;
 
   .carousel-inner {
-    height: 100vh;
+    height: 95vh;
     width: 520px;
     margin: 0px 10px;
     display: flex;
     align-items: center;
+    border-radius: 3px;
 
     img {
-      border-radius: 3px;
       transition: 0.3s;
     }
 

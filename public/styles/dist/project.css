@@ -62,6 +62,12 @@ a:visited {
 }
 .icons img {
   width: 30px;
+  transition: 0.2s;
+  margin-right: 4px;
+}
+.icons img:hover {
+  cursor: pointer;
+  transform: scale(1.2);
 }
 
 .middle {

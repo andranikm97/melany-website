@@ -6,8 +6,53 @@ var fs = require("fs");
 
 var path = require("path");
 
+var _ = require('lodash');
+
 router.get("/", function (req, res) {
-  res.render("home");
+  var carousel1Images = [];
+  var carousel2Images = [];
+  var directoryPath = path.join(__dirname, "public", "assets", 'first-page-pics');
+  fs.readdir(directoryPath, function (err, files) {
+    var indexes = [];
+    var count = 0;
+
+    while (indexes.length < files.length) {
+      indexes.push(count);
+      count++;
+    }
+
+    if (err) {
+      return console.log("Unable to scan directory: " + err);
+    }
+
+    var imagesCar1 = [];
+
+    _.shuffle(indexes).forEach(function (index) {
+      if (files[index] !== '.DS_Store') {
+        imagesCar1.push('/assets/first-page-pics/' + files[index]);
+      }
+
+      ;
+    });
+
+    var imagesCar2 = [];
+
+    _.shuffle(indexes).forEach(function (index) {
+      if (files[index] !== '.DS_Store') {
+        imagesCar2.push('/assets/first-page-pics/' + files[index]);
+      }
+
+      ;
+    });
+
+    console.log('');
+    res.render("home", {
+      imagesCar1Active: imagesCar1.shift(),
+      imagesCar1: imagesCar1,
+      imagesCar2Active: imagesCar2.shift(),
+      imagesCar2: imagesCar2
+    });
+  });
 });
 router.get("/home", function (req, res) {
   res.redirect("/");

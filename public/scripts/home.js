@@ -1,6 +1,7 @@
 $(document).ready(() => {
   console.log("Script is working!");
   const carousel1 = $('#carousel1');
+
   const carousel2 = $('#carousel2');
 
   const modal = $("#myModal");

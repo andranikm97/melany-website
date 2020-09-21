@@ -3,21 +3,23 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Melany's</title>
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
-  <link rel="stylesheet" href="/styles/dist/home.css" />
+  <link rel="stylesheet" type="text/css" media="screen and (min-width: 800px)" href="/styles/dist/home-desktop.css" />
+  <link rel="stylesheet" type="text/css" media="screen and (max-width: 420px)" href="/styles/dist/home-mobile.css" />
+
 </head>
 
 <body>
   <!-- CONTENT -->
 
   <div class="main">
-    <div class="left-sidebar">
+    <div class="left-sidebar top-sidebar">
       <h1 class="name">Melany Markaryan</h1>
       <div class="navigation">
         <a class="navigation-link" href="/">
@@ -33,70 +35,57 @@
       </div>
 
       <div class="icons">
-        <img class='contact-icon'
-          src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgNTEyIDUxMiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNTEyIDUxMjsiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGc+DQoJPGc+DQoJCTxwYXRoIGQ9Ik00NDgsMEg2NEMyOC43MDQsMCwwLDI4LjcwNCwwLDY0djM4NGMwLDM1LjI5NiwyOC43MDQsNjQsNjQsNjRoMTkyVjMzNmgtNjR2LTgwaDY0di02NGMwLTUzLjAyNCw0Mi45NzYtOTYsOTYtOTZoNjR2ODANCgkJCWgtMzJjLTE3LjY2NCwwLTMyLTEuNjY0LTMyLDE2djY0aDgwbC0zMiw4MGgtNDh2MTc2aDk2YzM1LjI5NiwwLDY0LTI4LjcwNCw2NC02NFY2NEM1MTIsMjguNzA0LDQ4My4yOTYsMCw0NDgsMHoiLz4NCgk8L2c+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8L3N2Zz4NCg==" />
+
+        <img class="contact-icon email"
+          src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE2LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCINCgkgd2lkdGg9IjUxMHB4IiBoZWlnaHQ9IjUxMHB4IiB2aWV3Qm94PSIwIDAgNTEwIDUxMCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNTEwIDUxMDsiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGc+DQoJPGcgaWQ9ImdtYWlsIj4NCgkJPHBhdGggZD0iTTQ1OSw1MUg1MUMyMi45NSw1MSwwLDczLjk1LDAsMTAydjMwNmMwLDI4LjA1LDIyLjk1LDUxLDUxLDUxaDQwOGMyOC4wNSwwLDUxLTIyLjk1LDUxLTUxVjEwMg0KCQkJQzUxMCw3My45NSw0ODcuMDUsNTEsNDU5LDUxeiBNNDU5LDQwOGgtNTFWMTgzLjZsLTE1Myw5Ni45bC0xNTMtOTYuOVY0MDhINTFWMTAyaDMwLjZMMjU1LDIwOS4xTDQyOC40LDEwMkg0NTlWNDA4eiIvPg0KCTwvZz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjwvc3ZnPg0K" />
+
         <img class='contact-icon'
           src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgNTEyIDUxMiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNTEyIDUxMjsiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGc+DQoJPGc+DQoJCTxwYXRoIGQ9Ik0zNTIsMEgxNjBDNzEuNjQ4LDAsMCw3MS42NDgsMCwxNjB2MTkyYzAsODguMzUyLDcxLjY0OCwxNjAsMTYwLDE2MGgxOTJjODguMzUyLDAsMTYwLTcxLjY0OCwxNjAtMTYwVjE2MA0KCQkJQzUxMiw3MS42NDgsNDQwLjM1MiwwLDM1MiwweiBNNDY0LDM1MmMwLDYxLjc2LTUwLjI0LDExMi0xMTIsMTEySDE2MGMtNjEuNzYsMC0xMTItNTAuMjQtMTEyLTExMlYxNjBDNDgsOTguMjQsOTguMjQsNDgsMTYwLDQ4DQoJCQloMTkyYzYxLjc2LDAsMTEyLDUwLjI0LDExMiwxMTJWMzUyeiIvPg0KCTwvZz4NCjwvZz4NCjxnPg0KCTxnPg0KCQk8cGF0aCBkPSJNMjU2LDEyOGMtNzAuNjg4LDAtMTI4LDU3LjMxMi0xMjgsMTI4czU3LjMxMiwxMjgsMTI4LDEyOHMxMjgtNTcuMzEyLDEyOC0xMjhTMzI2LjY4OCwxMjgsMjU2LDEyOHogTTI1NiwzMzYNCgkJCWMtNDQuMDk2LDAtODAtMzUuOTA0LTgwLTgwYzAtNDQuMTI4LDM1LjkwNC04MCw4MC04MHM4MCwzNS44NzIsODAsODBDMzM2LDMwMC4wOTYsMzAwLjA5NiwzMzYsMjU2LDMzNnoiLz4NCgk8L2c+DQo8L2c+DQo8Zz4NCgk8Zz4NCgkJPGNpcmNsZSBjeD0iMzkzLjYiIGN5PSIxMTguNCIgcj0iMTcuMDU2Ii8+DQoJPC9nPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPC9zdmc+DQo=" />
       </div>
     </div>
 
     <div class="middle">
+      {{#if imagesCar1 }}
       <div id="carouselExampleFade1" class="carousel slide carousel-fade" data-ride="carousel" data-interval="4250"
         data-pause="hover">
         <div id='carousel1' class="carousel-inner">
+
           <div class="carousel-item active">
-            <img src="/assets/first-page-pics/P1010826.jpg" class="d-block w-100" alt="..." />
+            <img src={{imagesCar1Active}} class="d-block w-100" alt="main {{imagesCar1Active}}" />
           </div>
+
+          {{#each imagesCar1}}
           <div class="carousel-item">
-            <img src="/assets/first-page-pics/P1020273.jpg" class="d-block w-100" alt="..." />
+            <img src={{this}} class="d-block w-100" alt={{this}} />
           </div>
-          <div class="carousel-item">
-            <img src="/assets/first-page-pics/P1010950 copy.png" class="d-block w-100" alt="..." />
-          </div>
-          <div class="carousel-item">
-            <img src="/assets/first-page-pics/P1020506.jpg" class="d-block w-100" alt="..." />
-          </div>
-          <div class="carousel-item">
-            <img src="/assets/first-page-pics/P1020543.jpg" class="d-block w-100" alt="..." />
-          </div>
-          <div class="carousel-item">
-            <img src="/assets/first-page-pics/P1020631.jpg" class="d-block w-100" alt="..." />
-          </div>
-          <div class="carousel-item">
-            <img src="/assets/first-page-pics/P1010511.jpg" class="d-block w-100" alt="..." />
-          </div>
+          {{/each}}
+
         </div>
 
       </div>
+      {{/if}}
 
-      <div id="carouselExampleFade2" class="carousel slide carousel-fade" data-ride="carousel" data-interval="3560"
+
+      {{#if imagesCar2 }}
+      <div id="carouselExampleFade2" class="carousel slide carousel-fade" data-ride="carousel" data-interval="6250"
         data-pause="hover">
         <div id='carousel2' class="carousel-inner">
+
           <div class="carousel-item active">
-            <img src="/assets/first-page-pics/P1010826.jpg" class="d-block w-100" alt="..." />
+            <img src={{imagesCar2Active}} class="d-block w-100" alt="main {{imagesCar2Active}}" />
           </div>
+
+          {{#each imagesCar2}}
           <div class="carousel-item">
-            <img src="/assets/first-page-pics/P1020273.jpg" class="d-block w-100" alt="..." />
+            <img src={{this}} class="d-block w-100" alt={{this}} />
           </div>
-          <div class="carousel-item">
-            <img src="/assets/first-page-pics/P1010950 copy.png" class="d-block w-100" alt="..." />
-          </div>
-          <div class="carousel-item">
-            <img src="/assets/first-page-pics/P1020506.jpg" class="d-block w-100" alt="..." />
-          </div>
-          <div class="carousel-item">
-            <img src="/assets/first-page-pics/P1020543.jpg" class="d-block w-100" alt="..." />
-          </div>
-          <div class="carousel-item">
-            <img src="/assets/first-page-pics/P1020631.jpg" class="d-block w-100" alt="..." />
-          </div>
+          {{/each}}
+
         </div>
 
-        {{!-- <div id="myModal" class="modal">
-          <!-- Modal Content (The Image) -->
-          <img class="modal-content" id="img01">
-        </div> --}}
       </div>
+      {{/if}}
+
 
       <div id="myModal" class="modal">
         <img class="modal-content" id="img01">
@@ -117,6 +106,7 @@
     integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
     </script>
   <script src="/scripts/home.js"></script>
+  <script src="/scripts/copyText.js"></script>
 </body>
 
 </html>
