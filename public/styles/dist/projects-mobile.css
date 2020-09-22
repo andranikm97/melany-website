@@ -1,0 +1,83 @@
+p,
+body {
+  margin: 0;
+  font-family: "Syne", sans-serif;
+  background-color: #e3e3e3;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+.main {
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  padding: 2%;
+  height: 100vh;
+  overflow: scroll;
+}
+.main .top-sidebar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.main .top-sidebar .name {
+  width: min-content;
+}
+.main .top-sidebar .navigation {
+  margin-left: 15px;
+  display: flex;
+  flex-flow: column nowrap;
+}
+.main .top-sidebar .navigation .navigation-link:active {
+  background-color: grey;
+  cursor: pointer;
+}
+.main .top-sidebar .navigation .navigation-text {
+  font-size: 20px;
+  background-color: transparent;
+}
+
+.icons {
+  position: absolute;
+  width: 100%;
+  bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.icons img {
+  width: 30px;
+  transition: 0.2s;
+  margin-right: 4px;
+  transform: scale(1);
+}
+.icons img:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.middle {
+  overflow: scroll;
+  display: flex;
+  flex-flow: column nowrap;
+  flex: 0 1 100%;
+  align-items: center;
+}
+.middle .project-container {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+.middle .project-container img {
+  width: 100%;
+}
+
+.icons {
+  position: relative;
+  margin-top: 10px;
+}

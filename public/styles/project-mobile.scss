@@ -1,0 +1,22 @@
+.middle {
+  overflow: scroll;
+  display: flex;
+  flex-flow: column nowrap;
+  flex: 0 1 100%;
+  align-items: center;
+
+  .project-container {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.icons {
+  position: relative;
+  margin-top: 10px;
+}
