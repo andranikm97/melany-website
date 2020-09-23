@@ -1,7 +1,0 @@
-File from: [public/assets/compressed-quality/**/*.{jpg,JPG,jpeg,JPEG,png,svg,gif}]
-
-File to: [-]
-
-Compression algorithm: [-]
-
-Description:  Directory is empty!: 
