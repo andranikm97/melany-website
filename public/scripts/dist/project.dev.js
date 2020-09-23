@@ -2,7 +2,6 @@
 
 $(document).ready(function () {
   var images = $('#images img');
-  console.log(images);
   var modal = $("#myModal");
   var modalImg = $("#img01");
   images.each(function (index, element) {

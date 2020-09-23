@@ -6,12 +6,13 @@ var fs = require("fs");
 
 var path = require("path");
 
-var _ = require('lodash');
+var _ = require("lodash");
 
+var quality = "compressed";
 router.get("/", function (req, res) {
   var carousel1Images = [];
   var carousel2Images = [];
-  var directoryPath = path.join(__dirname, "public", "assets", 'first-page-pics');
+  var directoryPath = path.join(__dirname, "public", "assets", "full-quality", "first-page-pics");
   fs.readdir(directoryPath, function (err, files) {
     var indexes = [];
     var count = 0;
@@ -28,24 +29,20 @@ router.get("/", function (req, res) {
     var imagesCar1 = [];
 
     _.shuffle(indexes).forEach(function (index) {
-      if (files[index] !== '.DS_Store') {
-        imagesCar1.push('/assets/first-page-pics/' + files[index]);
+      if (files[index] !== ".DS_Store") {
+        imagesCar1.push("/assets/".concat(quality, "-quality/first-page-pics/") + files[index]);
       }
-
-      ;
     });
 
     var imagesCar2 = [];
 
     _.shuffle(indexes).forEach(function (index) {
-      if (files[index] !== '.DS_Store') {
-        imagesCar2.push('/assets/first-page-pics/' + files[index]);
+      if (files[index] !== ".DS_Store") {
+        imagesCar2.push("/assets/".concat(quality, "-quality/first-page-pics/") + files[index]);
       }
-
-      ;
     });
 
-    console.log('');
+    console.log("");
     res.render("home", {
       imagesCar1Active: imagesCar1.shift(),
       imagesCar1: imagesCar1,
@@ -63,10 +60,8 @@ router.get("/projects", function (req, res) {
 router.get("/projects/:project", function (req, res) {
   var requestedRoute = req.params.project;
   var catRoute = requestedRoute === "B&W" ? "BW" : requestedRoute;
-  var directoryPath = path.join(__dirname, "public", "assets", catRoute);
+  var directoryPath = path.join(__dirname, "public", "assets", "".concat(quality, "-quality"), catRoute);
   fs.readdir(directoryPath, function (err, files) {
-    files.shift(); // remove .DS-store reference
-
     var images = [];
 
     if (err) {
@@ -74,7 +69,9 @@ router.get("/projects/:project", function (req, res) {
     }
 
     files.forEach(function (file) {
-      images.push("/assets/".concat(catRoute, "/").concat(file));
+      if (file !== ".DS_Store") {
+        images.push("/assets/".concat(quality, "-quality/").concat(catRoute, "/").concat(file));
+      }
     });
     res.render("project", {
       title: requestedRoute,

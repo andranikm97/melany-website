@@ -20,7 +20,8 @@ a:visited {
   flex-flow: column nowrap;
   justify-content: center;
   padding: 2%;
-  height: 100vh;
+  height: 90%;
+  max-height: 815px;
   overflow: scroll;
 
   .top-sidebar {

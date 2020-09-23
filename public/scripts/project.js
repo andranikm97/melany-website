@@ -1,6 +1,5 @@
 $(document).ready(() => {
   const images = $('#images img');
-  console.log(images);
   const modal = $("#myModal");
   const modalImg = $("#img01");
 

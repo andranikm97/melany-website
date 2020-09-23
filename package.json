@@ -14,6 +14,11 @@
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
     "express-handlebars": "^5.1.0",
-    "lodash": "^4.17.20"
+    "gifsicle": "^5.1.0",
+    "lodash": "^4.17.20",
+    "pngquant-bin": "^6.0.0"
+  },
+  "devDependencies": {
+    "compress-images": "^1.9.5"
   }
 }
