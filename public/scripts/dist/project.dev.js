@@ -1,9 +1,9 @@
 "use strict";
 
 $(document).ready(function () {
-  var images = $('#images img');
   var modal = $("#myModal");
   var modalImg = $("#img01");
+  var images = $('.display-image');
   images.each(function (index, element) {
     element.addEventListener('click', function () {
       modal.css({

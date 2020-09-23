@@ -41,7 +41,7 @@
       {{#each data}}
       <div class="image-container">
         {{#if this}}
-        <img src="{{this}}" alt="image">
+        <img class='display-image' src="{{this}}" alt="{{this}}">
         {{/if}}
       </div>
       {{/each}}
@@ -69,6 +69,20 @@
     integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
     </script>
   <script src="/scripts/project.js"></script>
+
+  <script> // Filter images that don't appear
+    const images = $('.display-image');
+    if (images) {
+      images.each(index => {
+        console.log(images[index]);
+        images[index].onerror = function () {
+          console.log('Error');
+          const imageNotShown = $(images[index]);
+          imageNotShown.css({ 'display': 'none' });
+        }
+      });
+    }
+  </script>
 </body>
 
 </html>

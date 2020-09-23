@@ -1,0 +1,8 @@
+File from: [public/assets/full-quality/UNTITLED/maragon.jpg]
+
+File to: [public/assets/compressed-quality/UNTITLED/maragon.jpg]
+
+Compression algorithm: [mozjpeg]
+
+Description: Error: Command failed: /Users/Andranik/dev/melany/personal-website/node_modules/mozjpeg/vendor/cjpeg -quality 60 -outfile public/assets/compressed-quality/UNTITLED/maragon.jpg public/assets/full-quality/UNTITLED/maragon.jpg
+Unrecognized input file format --- perhaps you need -targa

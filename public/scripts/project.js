@@ -1,9 +1,9 @@
 $(document).ready(() => {
-  const images = $('#images img');
   const modal = $("#myModal");
   const modalImg = $("#img01");
-
+  const images = $('.display-image');
   images.each((index, element) => {
+
     element.addEventListener('click', function () {
       modal.css({
         'display': 'flex',
