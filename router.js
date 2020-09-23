@@ -12,7 +12,7 @@ router.get("/", (req, res) => {
     __dirname,
     "public",
     "assets",
-    "full-quality",
+    `${quality}-quality`,
     "first-page-pics"
   );
 
