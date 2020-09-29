@@ -1,8 +1,17 @@
 "use strict";
 
-$(document).ready(function () {
-  var emailLink = $('.email');
-  emailLink.click(function () {
-    console.log('I got clicked');
+var emailIcon = $("#email-icon");
+var copyText = document.getElementById("email-link");
+var emailPopUp = $("#email-popUp");
+emailIcon.click(function () {
+  emailPopUp.css({
+    'opacity': '1'
   });
+  setTimeout(function () {
+    emailPopUp.css({
+      'opacity': '0'
+    });
+  }, 5000);
+  copyText.select();
+  document.execCommand("copy");
 });

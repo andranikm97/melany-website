@@ -17,6 +17,7 @@ a:visited {
   flex-flow: row nowrap;
   height: 100vh;
 }
+
 .main .left-sidebar {
   display: flex;
   flex-direction: column;
@@ -25,11 +26,13 @@ a:visited {
   padding: 20px;
   height: 100%;
 }
+
 .main .left-sidebar .name {
   font-weight: 600;
   font-size: 40px;
   margin: 0;
 }
+
 .main .left-sidebar .navigation {
   display: flex;
   flex-direction: column;
@@ -37,6 +40,7 @@ a:visited {
   align-items: flex-start;
   align-self: flex-start;
 }
+
 .main .left-sidebar .navigation .navigation-link {
   display: flex;
   flex-direction: row;
@@ -46,10 +50,12 @@ a:visited {
   border-radius: 4px;
   transition: background-color 0.5s;
 }
+
 .main .left-sidebar .navigation .navigation-link:hover {
   background-color: grey;
   cursor: pointer;
 }
+
 .main .left-sidebar .navigation .navigation-text {
   font-size: 20px;
   background-color: transparent;
@@ -60,11 +66,13 @@ a:visited {
   bottom: 10px;
   left: 25px;
 }
+
 .icons img {
   width: 30px;
   transition: 0.2s;
   margin-right: 4px;
 }
+
 .icons img:hover {
   cursor: pointer;
   transform: scale(1.2);
@@ -78,17 +86,28 @@ a:visited {
   padding: 15px;
   width: auto;
 }
+
+.main .left-sidebar .name p {
+  margin: 0px;
+  overflow: hidden;
+  font-weight: 600;
+  font-size: 40px;
+  animation: openText 1s ease-out forwards 1s;
+}
+
 .middle .project-container {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
   margin: 30px 0px;
 }
+
 .middle .project-container .project-image {
   height: 500px;
   border-radius: 3px;
   transition: 0.3s;
 }
+
 .middle .project-container p {
   width: 150px;
   display: flex;
@@ -102,12 +121,25 @@ a:visited {
   border-radius: 5px;
   transition: 0.3s;
 }
+
 .middle .project-container:hover {
   cursor: pointer;
 }
+
 .middle .project-container:hover .project-image {
   filter: brightness(50%);
 }
+
 .middle .project-container:hover p {
   filter: brightness(110%);
+}
+
+@keyframes openText {
+  from {
+    width: 0%;
+  }
+
+  to {
+    width: 100%;
+  }
 }

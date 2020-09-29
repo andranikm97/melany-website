@@ -1,8 +1,16 @@
-$(document).ready(function () {
-  const emailLink = $('.email');
+const emailIcon = $("#email-icon");
+const copyText = document.getElementById("email-link");
+const emailPopUp = $("#email-popUp");
 
-  emailLink.click(() => {
-    console.log('I got clicked');
+emailIcon.click(() => {
+  emailPopUp.css({
+    'opacity': '1'
   });
-
+  setTimeout(() => {
+    emailPopUp.css({
+      'opacity': '0',
+    });
+  }, 5000);
+  copyText.select();
+  document.execCommand("copy");
 });
