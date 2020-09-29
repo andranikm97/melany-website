@@ -1,16 +1,27 @@
-const emailIcon = $("#email-icon");
-const copyText = document.getElementById("email-link");
-const emailPopUp = $("#email-popUp");
+$(document).ready(() => {
 
-emailIcon.click(() => {
-  emailPopUp.css({
-    'opacity': '1'
-  });
-  setTimeout(() => {
+  const emailIcon = $("#email-icon");
+  const emailPopUp = $("#email-popUp");
+
+  emailIcon.click(() => {
     emailPopUp.css({
-      'opacity': '0',
+      'opacity': '1'
     });
-  }, 4000);
-  copyText.select();
-  document.execCommand("copy");
+    setTimeout(() => {
+      emailPopUp.css({
+        'opacity': '0',
+      });
+    }, 4000);
+
+    const copyText = document.querySelector(".email-text");
+    copyText.select();
+
+    try {
+      const successful = document.execCommand('copy');
+      const msg = successful ? 'successful' : 'unsuccessful';
+      console.log('Copying text command was ' + msg);
+    } catch (err) {
+      console.log('Oops, unable to copy');
+    }
+  });
 });

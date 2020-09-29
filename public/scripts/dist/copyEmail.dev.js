@@ -1,17 +1,26 @@
 "use strict";
 
-var emailIcon = $("#email-icon");
-var copyText = document.getElementById("email-link");
-var emailPopUp = $("#email-popUp");
-emailIcon.click(function () {
-  emailPopUp.css({
-    'opacity': '1'
-  });
-  setTimeout(function () {
+$(document).ready(function () {
+  var emailIcon = $("#email-icon");
+  var emailPopUp = $("#email-popUp");
+  emailIcon.click(function () {
     emailPopUp.css({
-      'opacity': '0'
+      'opacity': '1'
     });
-  }, 4000);
-  copyText.select();
-  document.execCommand("copy");
+    setTimeout(function () {
+      emailPopUp.css({
+        'opacity': '0'
+      });
+    }, 4000);
+    var copyText = document.querySelector(".email-text");
+    copyText.select();
+
+    try {
+      var successful = document.execCommand('copy');
+      var msg = successful ? 'successful' : 'unsuccessful';
+      console.log('Copying text command was ' + msg);
+    } catch (err) {
+      console.log('Oops, unable to copy');
+    }
+  });
 });

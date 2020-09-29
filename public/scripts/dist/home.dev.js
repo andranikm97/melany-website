@@ -1,7 +1,6 @@
 "use strict";
 
 $(document).ready(function () {
-  console.log("Script is working!");
   var carousel1 = $('#carousel1');
   var carousel2 = $('#carousel2');
   var modal = $("#myModal");
@@ -25,8 +24,7 @@ $(document).ready(function () {
       'align-items': 'center'
     });
     modalImg.attr('src', clickedImage.src);
-  }); // When the user clicks on <span> (x), close the modal
-
+  });
   modal.click(function () {
     modal.css('display', 'none');
   });

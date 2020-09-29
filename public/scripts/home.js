@@ -1,7 +1,5 @@
 $(document).ready(() => {
-  console.log("Script is working!");
   const carousel1 = $('#carousel1');
-
   const carousel2 = $('#carousel2');
 
   const modal = $("#myModal");
@@ -28,7 +26,6 @@ $(document).ready(() => {
     modalImg.attr('src', clickedImage.src);
   });
 
-  // When the user clicks on <span> (x), close the modal
   modal.click(function () {
     modal.css('display', 'none');
   });
