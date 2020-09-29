@@ -113,3 +113,21 @@ a:visited {
     width: 100%;
   }
 }
+.info-section {
+  height: 90%;
+  padding: 20px;
+  display: flex;
+  flex-flow: row nowrap;
+}
+.info-section .photo-container {
+  flex: 0 0 30%;
+  margin: 1%;
+}
+.info-section .photo-container img {
+  width: 100%;
+  border-radius: 10px;
+}
+.info-section .text {
+  flex: 0 0 60%;
+  margin: 1%;
+}

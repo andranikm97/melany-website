@@ -10,7 +10,7 @@ emailIcon.click(() => {
     emailPopUp.css({
       'opacity': '0',
     });
-  }, 5000);
+  }, 4000);
   copyText.select();
   document.execCommand("copy");
 });

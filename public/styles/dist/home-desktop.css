@@ -65,7 +65,7 @@ a:visited {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  padding: 7px 20px 7px 0px;
+  padding: 7px 20px 7px 3px;
   margin: 5px 0px;
   border-radius: 4px;
   transition: background-color 0.5s;
