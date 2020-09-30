@@ -1,23 +1,26 @@
 @use 'base';
+@use 'base-mobile';
 
-.info-section {
-  height: 90%;
-  padding: 20px;
-  display: flex;
-  flex-flow: row nowrap;
+@media only screen and (min-width: 450px) {
+  .info-section {
+    height: 90%;
+    padding: 20px;
+    display: flex;
+    flex-flow: row nowrap;
 
-  .photo-container {
-    flex: 0 0 30%;
-    margin: 1%;
+    .photo-container {
+      flex: 0 0 30%;
+      margin: 1%;
 
-    img {
-      width: 100%;
-      border-radius: 10px;
+      img {
+        width: 100%;
+        border-radius: 10px;
+      }
     }
-  }
 
-  .text {
-    flex: 0 0 60%;
-    margin: 1%;
+    .text {
+      flex: 0 0 60%;
+      margin: 1%;
+    }
   }
 }

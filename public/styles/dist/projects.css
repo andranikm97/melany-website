@@ -1,3 +1,68 @@
+@media only screen and (max-width: 445px) {
+  p,
+body {
+    margin: 0;
+    font-family: "Syne", sans-serif;
+    background-color: #e3e3e3;
+  }
+
+  a:link,
+a:visited {
+    text-decoration: none;
+    color: black;
+  }
+
+  .main {
+    position: relative;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    padding: 2%;
+    height: 90%;
+    max-height: 815px;
+    overflow: scroll;
+  }
+  .main .top-sidebar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .main .top-sidebar .name {
+    width: min-content;
+  }
+  .main .top-sidebar .navigation {
+    margin-left: 15px;
+    display: flex;
+    flex-flow: column nowrap;
+  }
+  .main .top-sidebar .navigation .navigation-link:active {
+    background-color: grey;
+    cursor: pointer;
+  }
+  .main .top-sidebar .navigation .navigation-text {
+    font-size: 20px;
+    background-color: transparent;
+  }
+
+  .icons {
+    position: absolute;
+    width: 100%;
+    bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .icons img {
+    width: 30px;
+    transition: 0.2s;
+    margin-right: 4px;
+    transform: scale(1);
+  }
+  .icons img:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+  }
+}
 @media only screen and (min-width: 450px) {
   input.email-text {
     display: none;
@@ -115,88 +180,68 @@ a:visited {
     }
   }
 }
-@media only screen and (max-width: 445px) {
-  p,
-body {
-    margin: 0;
-    font-family: "Syne", sans-serif;
-    background-color: #e3e3e3;
+@media only screen and (min-width: 450px) {
+  .middle {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    overflow: scroll;
+    padding: 15px;
+    width: auto;
   }
-
-  a:link,
-a:visited {
-    text-decoration: none;
-    color: black;
-  }
-
-  .main {
-    position: relative;
+  .middle .project-container {
     display: flex;
     flex-flow: column nowrap;
-    justify-content: center;
-    padding: 2%;
-    height: 90%;
-    max-height: 815px;
-    overflow: scroll;
+    align-items: center;
+    margin: 30px 0px;
   }
-  .main .top-sidebar {
+  .middle .project-container .project-image {
+    height: 500px;
+    border-radius: 3px;
+    transition: 0.3s;
+  }
+  .middle .project-container p {
+    width: 150px;
     display: flex;
     flex-direction: row;
-    align-items: center;
+    justify-content: center;
+    font-family: "Syne", sans-serif;
+    font-weight: 400;
+    font-size: 25px;
+    margin-top: 5px;
+    margin-bottom: 0px;
+    border-radius: 5px;
+    transition: 0.3s;
   }
-  .main .top-sidebar .name {
-    width: min-content;
-  }
-  .main .top-sidebar .navigation {
-    margin-left: 15px;
-    display: flex;
-    flex-flow: column nowrap;
-  }
-  .main .top-sidebar .navigation .navigation-link:active {
-    background-color: grey;
+  .middle .project-container:hover {
     cursor: pointer;
   }
-  .main .top-sidebar .navigation .navigation-text {
-    font-size: 20px;
-    background-color: transparent;
+  .middle .project-container:hover .project-image {
+    filter: brightness(50%);
+  }
+  .middle .project-container:hover p {
+    filter: brightness(110%);
+  }
+}
+@media only screen and (max-width: 445px) {
+  .middle {
+    overflow: scroll;
+    display: flex;
+    flex-flow: column nowrap;
+    flex: 0 1 100%;
+    align-items: center;
+  }
+  .middle .project-container {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+  }
+  .middle .project-container img {
+    width: 100%;
   }
 
   .icons {
-    position: absolute;
-    width: 100%;
-    bottom: 10px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-  }
-  .icons img {
-    width: 30px;
-    transition: 0.2s;
-    margin-right: 4px;
-    transform: scale(1);
-  }
-  .icons img:hover {
-    cursor: pointer;
-    transform: scale(1.2);
-  }
-}
-@media only screen and (min-width: 450px) {
-  .info-section {
-    height: 90%;
-    padding: 20px;
-    display: flex;
-    flex-flow: row nowrap;
-  }
-  .info-section .photo-container {
-    flex: 0 0 30%;
-    margin: 1%;
-  }
-  .info-section .photo-container img {
-    width: 100%;
-    border-radius: 10px;
-  }
-  .info-section .text {
-    flex: 0 0 60%;
-    margin: 1%;
+    position: relative;
+    margin-top: 10px;
   }
 }

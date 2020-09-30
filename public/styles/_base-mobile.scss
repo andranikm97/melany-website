@@ -1,76 +1,77 @@
 $font-stack: "Syne",
 sans-serif;
 
-p,
-body {
-  margin: 0;
-  font-family: $font-stack;
-  background-color: #e3e3e3;
-}
+@media only screen and (max-width: 445px) {
 
-a:link,
-a:visited {
-  text-decoration: none;
-  color: black;
-}
+  p,
+  body {
+    margin: 0;
+    font-family: $font-stack;
+    background-color: #e3e3e3;
+  }
 
-.main {
-  position: relative;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  padding: 2%;
-  height: 90%;
-  max-height: 815px;
-  overflow: scroll;
+  a:link,
+  a:visited {
+    text-decoration: none;
+    color: black;
+  }
 
-  .top-sidebar {
+  .main {
+    position: relative;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    padding: 2%;
+    height: 90%;
+    max-height: 815px;
+    overflow: scroll;
+
+    .top-sidebar {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      .name {
+        width: min-content;
+      }
+
+      .navigation {
+        margin-left: 15px;
+        display: flex;
+        flex-flow: column nowrap;
+
+        .navigation-link:active {
+          background-color: grey;
+          cursor: pointer;
+        }
+
+        .navigation-text {
+          font-size: 20px;
+          background-color: transparent;
+        }
+      }
+    }
+
+  }
+
+  .icons {
+    position: absolute;
+    width: 100%;
+    bottom: 10px;
     display: flex;
     flex-direction: row;
-    align-items: center;
+    justify-content: center;
 
-    .name {
-      width: min-content;
+    img {
+      width: 30px;
+      transition: 0.2s;
+      margin-right: 4px;
+      transform: scale(1);
     }
 
-    .navigation {
-      margin-left: 15px;
-      display: flex;
-      flex-flow: column nowrap;
-
-      .navigation-link {}
-
-      .navigation-link:active {
-        background-color: grey;
-        cursor: pointer;
-      }
-
-      .navigation-text {
-        font-size: 20px;
-        background-color: transparent;
-      }
+    img:hover {
+      cursor: pointer;
+      transform: scale(1.2);
     }
-  }
-
-}
-
-.icons {
-  position: absolute;
-  width: 100%;
-  bottom: 10px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-
-  img {
-    width: 30px;
-    transition: 0.2s;
-    margin-right: 4px;
-    transform: scale(1);
-  }
-
-  img:hover {
-    cursor: pointer;
-    transform: scale(1.2);
   }
 }
