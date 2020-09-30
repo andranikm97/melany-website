@@ -26,14 +26,28 @@ a:visited {
     display: flex;
     flex-direction: row;
     align-items: center;
+    width: 100%;
   }
-  .main .top-sidebar .name {
-    width: min-content;
-  }
-  .main .top-sidebar .navigation {
-    margin-left: 15px;
+  .main .top-sidebar .icons {
     display: flex;
     flex-flow: column nowrap;
+    align-items: center;
+    flex: 0 0 15%;
+  }
+  .main .top-sidebar .icons .contact-icon {
+    width: 30px;
+    margin: 2px 0px;
+  }
+  .main .top-sidebar .name {
+    font-family: "Syne", sans-serif;
+    flex: 0 0 40%;
+    font-size: 30px;
+  }
+  .main .top-sidebar .navigation {
+    margin-left: 25px;
+    display: flex;
+    flex-flow: column nowrap;
+    flex: 0 0 auto;
   }
   .main .top-sidebar .navigation .navigation-link:active {
     background-color: grey;
@@ -42,25 +56,6 @@ a:visited {
   .main .top-sidebar .navigation .navigation-text {
     font-size: 20px;
     background-color: transparent;
-  }
-
-  .icons {
-    position: absolute;
-    width: 100%;
-    bottom: 10px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-  }
-  .icons img {
-    width: 30px;
-    transition: 0.2s;
-    margin-right: 4px;
-    transform: scale(1);
-  }
-  .icons img:hover {
-    cursor: pointer;
-    transform: scale(1.2);
   }
 }
 @media only screen and (min-width: 450px) {
@@ -238,10 +233,5 @@ a:visited {
   }
   .middle .project-container img {
     width: 100%;
-  }
-
-  .icons {
-    position: relative;
-    margin-top: 10px;
   }
 }

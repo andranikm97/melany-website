@@ -135,22 +135,35 @@ a:visited {
     flex-flow: column nowrap;
     justify-content: center;
     padding: 2%;
-    height: 90%;
-    max-height: 815px;
-    overflow: scroll;
+    height: 95%;
   }
   .main .top-sidebar {
     display: flex;
     flex-direction: row;
     align-items: center;
+    width: 100%;
+    height: auto;
   }
-  .main .top-sidebar .name {
-    width: min-content;
-  }
-  .main .top-sidebar .navigation {
-    margin-left: 15px;
+  .main .top-sidebar .icons {
     display: flex;
     flex-flow: column nowrap;
+    align-items: center;
+    flex: 0 0 15%;
+  }
+  .main .top-sidebar .icons .contact-icon {
+    width: 30px;
+    margin: 2px 0px;
+  }
+  .main .top-sidebar .name {
+    font-family: "Syne", sans-serif;
+    flex: 0 0 40%;
+    font-size: 30px;
+  }
+  .main .top-sidebar .navigation {
+    margin-left: 25px;
+    display: flex;
+    flex-flow: column nowrap;
+    flex: 0 0 auto;
   }
   .main .top-sidebar .navigation .navigation-link:active {
     background-color: grey;
@@ -160,24 +173,13 @@ a:visited {
     font-size: 20px;
     background-color: transparent;
   }
-
-  .icons {
-    position: absolute;
-    width: 100%;
-    bottom: 10px;
+  .main .middle {
+    margin-top: 15px;
+    height: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
-  }
-  .icons img {
-    width: 30px;
-    transition: 0.2s;
-    margin-right: 4px;
-    transform: scale(1);
-  }
-  .icons img:hover {
-    cursor: pointer;
-    transform: scale(1.2);
+    align-items: center;
   }
 }
 @media only screen and (min-width: 450px) {
@@ -198,5 +200,21 @@ a:visited {
   .info-section .text {
     flex: 0 0 60%;
     margin: 1%;
+  }
+}
+@media only screen and (max-width: 445px) {
+  .photo-container {
+    margin: 5px 0px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+  }
+  .photo-container .photo {
+    width: 95%;
+  }
+
+  .text {
+    padding: 4px;
+    line-height: 15px;
   }
 }

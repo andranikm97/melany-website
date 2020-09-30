@@ -24,3 +24,21 @@
     }
   }
 }
+
+@media only screen and (max-width: 445px) {
+  .photo-container {
+    margin: 5px 0px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+
+    .photo {
+      width: 95%;
+    }
+  }
+
+  .text {
+    padding: 4px;
+    line-height: 15px;
+  }
+}
